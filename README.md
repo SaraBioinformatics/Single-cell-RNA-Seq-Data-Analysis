@@ -101,3 +101,22 @@ Author Manuscript
 
 8) DAVID
 To use DAVID, proceed to the following URL: david.ncifcrf.gov.
+# SEURAT
+F) using seurat
+use .h5 file
+
+script to perform standard workflow steps to analyze single cell RNA-Seq data
+data: 20k Mixture of NSCLC DTCs from 7 donors, 3' v3.1
+getwd() setwd("seurat/") devtools::install_version(package = 'Seurat', version = package_version('3.2.3')) BiocManager::install("Seurat") install.packages("Matrix", repos = "http://R-Forge.R-project.org") getwd() setwd("Downloads/ScRNA-Seq/seurat/") install.packages("seurat") library(Seurat) library(tidyverse) install.packages("hdf5r") library("hdf5r") BiocManager::install("rhdf5r")
+
+1. QC -------(quality control)
+2. Filtering -----------------(filtering)
+3. Normalize data ----------(Data normalization)
+4. Identify highly variable features --------------
+Identify the 10 most highly variable genes
+plot variable features with and without labels
+5. Scaling ------------
+6. Perform Linear dimensionality reduction --------------
+visualize PCA results
+determine dimensionality of the data
+7. Clustering ------------
